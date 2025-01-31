@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 156px;
+  background-color: #fff;
+}
+
+.gallery-item {
+  width: calc((100% - 24px * 2) / 3);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 240ms ease-in-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
