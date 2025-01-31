@@ -83,6 +83,17 @@ const galleryMarkup = images
 
 galleryContainer.innerHTML = galleryMarkup;
 
-galleryContainer.addEventListener("click", (event) => {
+galleryContainer.addEventListener("click", onGalleryImageClick);
+
+function onGalleryImageClick(event) {
   event.preventDefault();
-});
+
+  if (event.target.classList.contains("gallery-image")) {
+    const imageOriginal = event.target.dataset.source;
+
+    const modal = basicLightbox.create(
+      `<img src="${imageOriginal}" width="1112" height="640">`
+    );
+    modal.show();
+  }
+}
