@@ -92,7 +92,7 @@ function onGalleryImageClick(event) {
     const imageOriginal = event.target.dataset.source;
 
     const modal = basicLightbox.create(
-      `<img src="${imageOriginal}" width="1112" height="640">`
+      `<img class="modal-image" src="${imageOriginal}" width="1112" height="640">`
     );
     modal.show();
   }
